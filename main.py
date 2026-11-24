@@ -13,6 +13,9 @@ vacuum's whole job, so the joke comes from the fit: the sock is
 reclassified as the one thing the vacuum is supposed to eat.
 """
 
+import os
+
+
 LINE = (
     "In my defence, the sock was on the floor, unlabelled, "
     "and legally indistinguishable from dust."
@@ -20,6 +23,7 @@ LINE = (
 
 
 def main() -> None:
+    os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(LINE)
 
